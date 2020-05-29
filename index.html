@@ -18,8 +18,11 @@
   <div id="app">
     <h2>{{ title }}</h2>
     <p>My name is {{name}}</p>
-    <!-- two-way data binding -->
-    <input type="text" v-model="name"> 
+    <!-- with keyboard pressing -->
+    <button @click.alt="logMessage">Alt-Click Me</button>
+    <button @click.shift="logMessage">Shift-Click Me</button>
+    <!-- @click.prevent stay in the page -->
+    <a href="http://www.google.com" @click.prevent="logMessage">Google</a>
   </div>
   <script src="app.js"></script>
 </body>
