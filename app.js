@@ -2,11 +2,15 @@ new Vue({
   el: "#app", //element
   data: {
     title: "Becoming a Ninja turtle", // property
-    name: "Melih",
+    showName: false,
+    showAge: true
   },
   methods: {
-    logMessage(){
-        console.log("hello world");
-    }
+    toggleName() {
+      this.showName = !this.showName;
+    },
+    toggleAge() {
+        this.showAge = !this.showAge;
+      },
   },
 });
