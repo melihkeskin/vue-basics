@@ -2,6 +2,14 @@
   <head>
     <title>Vue Basics</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      .one{
+        color: goldenrod;
+      }
+      .two{
+        text-decoration: line-through;
+      }
+    </style>
   </head>
 </html>
 <body>
@@ -10,6 +18,12 @@
   <div id="app">
     <h2>{{ title }}</h2>
     <p>{{greet('good morning')}}</p>
+
+    <!-- directive data binding -->
+    <a v-bind:href="url">Youtube</a>
+    <!-- dynamic class add -->
+    <div :class="classes">Classes from instance</div>
+    <input type="text" :value="name">
   </div>
   <script src="app.js"></script>
 </body>
