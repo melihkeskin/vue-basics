@@ -1,12 +1,19 @@
 new Vue({
   el: "#app", //element
   data: {
-    title: "Becoming a Vue ninja", // property
-    wage: 10,
+    title: "Becoming a Ninja turtle", // property 
+    coords:{
+        x:0,
+        y:0
+    }
   },
-  methods: {
-    changeWage(amount) {
-      return (this.wage += amount);
-    },
+  methods: { 
+      logEvent(e){
+          console.log(e);
+      },
+      logCoords(e){
+          this.coords.x = e.offsetX;
+          this.coords.y = e.offsetY;
+      }
   },
 });
