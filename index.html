@@ -18,9 +18,8 @@
   <div id="app">
     <h2>{{ title }}</h2>
     <p>My name is {{name}}</p>
-    <input type="text" @keyup="updateName">
-    <!-- always coming behind -->
-    <input type="text" @keypress="updateName">
+    <!-- two-way data binding -->
+    <input type="text" v-model="name"> 
   </div>
   <script src="app.js"></script>
 </body>
