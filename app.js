@@ -1,19 +1,12 @@
 new Vue({
   el: "#app", //element
   data: {
-    title: "Becoming a Ninja turtle", // property 
-    coords:{
-        x:0,
-        y:0
-    }
+    title: "Becoming a Ninja turtle", // property
+    name: "Melih",
   },
-  methods: { 
-      logEvent(e){
-          console.log(e);
-      },
-      logCoords(e){
-          this.coords.x = e.offsetX;
-          this.coords.y = e.offsetY;
-      }
+  methods: {
+    updateName(e) {
+      this.name = e.target.value;
+    },
   },
 });
